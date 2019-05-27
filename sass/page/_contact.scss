@@ -1,0 +1,60 @@
+.wpcf7-form {
+	text-align: left;
+	width: 100%;
+
+	p {
+		text-align: left;
+		margin-bottom: 30px;
+
+		.form-label {
+			padding: 0 10px;
+			display: block;
+			width: 100%;
+			font-size: 1.1em;
+			font-weight: 600;
+			margin: 0;
+			border-bottom: 3px dashed $color-main;
+
+			@include mq("tab") {
+				width: 56%;
+			}
+
+			@include mq("pc") {
+				width: 50%;
+			}
+		}
+
+		input {
+			display: block;
+			width: 100%;
+			padding: 8px;
+			border: 3px solid $color-main;
+			margin-top: 15px;
+
+			@include mq("tab") {
+				width: 56%;
+			}
+
+			@include mq("pc") {
+				width: 50%;
+			}
+		} // /input //
+
+		textarea {
+			display: block;
+			width: 100%;
+			resize: vertical;
+			min-height: 200px;
+			border: 3px solid $color-main;
+			margin-top: 15px;
+		}
+
+		.btn {
+			display: block;
+			padding: 15px;
+			cursor: pointer;
+			font-size: 1.5em;
+			margin: auto;
+		}
+	} // /p //
+}

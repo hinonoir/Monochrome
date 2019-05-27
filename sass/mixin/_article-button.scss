@@ -1,0 +1,23 @@
+@mixin article-button {
+	display: block;
+	text-align: center;
+	background-color: $color-button;
+	text-decoration: none;
+	border: $color-button;
+	box-shadow: 0 0 0 2px #fff, 0 0 0 4px $color-button;
+	padding: 5px;
+	font-family: "Kosugi Maru", sans-serif;
+	cursor: pointer;
+
+	@include link-cus(#fff);
+
+	&:hover {
+		background-color: lighten($color-button, 10%);
+		box-shadow: 0 0 0 2px #fff, 0 0 0 4px lighten($color-button, 10%);
+		color: #fff;
+	}
+
+	@include mq("tab") {
+		font-size: 1.2em;
+	}
+}

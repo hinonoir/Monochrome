@@ -1,0 +1,11 @@
+@mixin link-cus($color) {
+	color: $color;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:visited {
+		color: $color;
+	}
+}

@@ -1,0 +1,175 @@
+// 投稿記事の書式設定用ファイル
+
+.article-content {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	a,
+	p,
+	span,
+	em,
+	small,
+	strong,
+	sub,
+	sup,
+	mark,
+	del,
+	ins,
+	strike,
+	abbr,
+	dfn,
+	blockquote,
+	q,
+	cite,
+	code,
+	pre,
+	ol,
+	ul,
+	li,
+	dl,
+	dt,
+	dd,
+	div,
+	section,
+	article,
+	main,
+	aside,
+	nav,
+	header,
+	hgroup,
+	footer,
+	img,
+	figure,
+	figcaption,
+	address,
+	time,
+	audio,
+	video,
+	canvas,
+	iframe,
+	details,
+	summary,
+	fieldset,
+	form,
+	label,
+	legend,
+	table,
+	caption,
+	tbody,
+	tfoot,
+	thead,
+	tr,
+	th,
+	td {
+		margin: 40px 0;
+	}
+
+	// リスト
+	$color-bg-list: #eee;
+
+	ul {
+		background-color: $color-bg-list;
+		padding: 10px 20px;
+		margin-right: 20px;
+		margin-left: 20px;
+
+		li {
+			list-style: disc;
+			list-style-position: inside;
+			margin: 0;
+		}
+	}
+
+	ol {
+		background-color: $color-bg-list;
+		padding: 10px 20px;
+		margin-right: 20px;
+		margin-left: 20px;
+
+		li {
+			list-style-type: decimal;
+			list-style-position: inside;
+			margin: 0;
+		}
+	}
+
+	$color-bg-pre: #f7f7f7;
+	$color-bg-blockquote: #f7f7f7;
+	// ページ幅に合わせてコンテンツを折り返す
+	pre {
+		white-space: pre-wrap;
+		background-color: $color-bg-pre;
+	}
+
+	// ブロッククォート（引用、プルクォート）
+	blockquote {
+		background-color: $color-bg-blockquote;
+		border: 1px solid $color-main;
+		padding: 20px;
+		color: $color-text-sub;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	// プルクォート
+	.wp-block-pullquote {
+		padding: 0;
+	}
+
+	// ギャラリー
+	.wp-block-gallery {
+
+		.blocks-gallery-item {
+			position: initial;
+		}
+
+		img {
+			width: 100% !important;
+			height: auto !important;
+		}
+	} // /.wp-block-gallery //
+
+	$color-border-block: 3px solid #ddd;
+	// 詩
+	.wp-block-verse {
+		border: $color-border-block;
+		padding: 15px;
+	}
+
+	// 整形済み
+	.wp-block-preformatted {
+		border: $color-border-block;
+		padding: 20px;
+	}
+
+	// コード
+	.wp-block-code {
+		border: $color-border-block;
+		padding: 5px;
+		font-size: 0.8em;
+	}
+
+	.wp-block-button__link {
+
+		@include article-button;
+		display: inline-block;
+		padding: 10px;
+		border-radius: 0;
+	}
+
+	// ページ幅に合わせる
+	.twitter-tweet {
+		width: auto !important;
+	}
+
+	// Contact Form 7のフォームがドロワーメニューより上に来ないように
+	.wpcf7-form-control-wrap {
+		position: initial;
+	}
+} // /section //

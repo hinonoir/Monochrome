@@ -1,0 +1,12 @@
+.breadcrumb {
+	margin: 5px 0;
+
+	a {
+		font-size: 0.9em;
+	}
+
+	.bc-current-page {
+		font-size: 0.9em;
+		color: $color-text-sub;
+	}
+}

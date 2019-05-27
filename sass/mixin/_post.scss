@@ -1,0 +1,36 @@
+@mixin post($fsz, $color) {
+	border: $color-section-border;
+
+	a {
+		display: block;
+
+		&:hover {
+			text-decoration: none;
+			opacity: 0.85;
+		}
+
+		img {
+			height: auto;
+			width: 100%;
+			border: $color-section-border;
+		}
+
+		.post-text {
+			text-align: left;
+			padding: 5px;
+
+			.post-title {
+				color: $color;
+				font-size: $fsz;
+				margin-bottom: 5px;
+			}
+
+			p {
+				color: $color-text-sub;
+				font-weight: 600;
+				line-height: 1.5;
+				margin-bottom: 5px;
+			}
+		} // /.post-text //
+	} // /a //
+}

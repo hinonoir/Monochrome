@@ -1,0 +1,53 @@
+footer {
+	width: 100%;
+	background-color: $color-bg-footer;
+	border-top: $color-section-border;
+
+	.footer-inner {
+		padding: 30px 20px;
+
+		@include mq("tab") {
+			padding: 50px 0;
+		}
+
+		// フッターのウィジェット
+		.footer-widget {
+
+			@include mq("tab") {
+				display: flex;
+			}
+
+			// ウィジェットの幅
+			.widget-item {
+				flex: 1;
+				margin-top: 40px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				@include mq("tab") {
+					margin-top: 0;
+					margin-right: 20px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			} // /.widget //
+
+			.portfolio {
+
+				@include link-list;
+			} // /.portfolio //
+		} // /.footer-widget //
+	} // /.footer-inner //
+
+	// フッターのコピーライト
+	.footer-copyright {
+		color: #fff;
+		background-color: $color-main;
+		padding: 5px;
+		text-align: center;
+	}
+}

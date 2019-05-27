@@ -1,0 +1,102 @@
+#sidebar {
+	width: 100%;
+
+	@include mq("tab") {
+		flex: 1;
+		margin-left: 30px;
+	}
+
+	.widget-item {
+		background-color: $color-bg-section;
+		border: $color-section-border;
+		margin-bottom: 20px;
+
+		&:first-child {
+			margin-top: 20px;
+
+			@include mq("tab") {
+				margin-top: 0;
+			}
+		}
+
+		&:last-child {
+
+			@include mq("tab") {
+				margin-bottom: 0;
+			}
+		}
+
+		.widget {
+			padding: 20px;
+
+			// 検索フォーム
+			.searchform {
+				display: flex;
+
+				.searchfield {
+					width: 75%;
+					padding: 10px 5px;
+					border: $color-form-border;
+					background-color: #fff;
+				}
+
+				.searchsubmit {
+					flex: 1;
+					border: none;
+					background-color: $color-button;
+					color: #fff;
+					cursor: pointer;
+
+					&:hover {
+						background-color: lighten($color-button, 10%);
+					}
+				}
+			} // /.searchform //
+
+			article {
+				margin-bottom: 30px;
+
+				@include post(1em, $color-text-sub);
+
+				.post-category {
+					padding: 0;
+					font-size: 0.7em;
+				}
+			} // /article //
+		} // /.widget //
+
+		.widgettitle {
+			color: #fff;
+			background-color: $color-main;
+			padding: 10px;
+		}
+	} // /.widget-item //
+
+	.profile {
+		text-align: left;
+		margin-bottom: 10px;
+
+		p {
+			display: flex;
+			padding: 0 10px;
+			font-size: 0.9em;
+
+			strong {
+				margin: 0 auto 20px auto;
+			}
+
+			img {
+				border-radius: 50%;
+				margin: 0 auto 20px auto;
+				border: $color-section-border;
+			}
+		}
+	}
+
+	.widget_archive,
+	.widget_categories,
+	.widget_recent_entries {
+
+		@include link-list;
+	}
+}

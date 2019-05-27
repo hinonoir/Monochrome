@@ -1,0 +1,72 @@
+header {
+	width: 100%;
+	background-color: $color-bg-header;
+	border-bottom: $color-section-border;
+
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		// ヘッダーロゴと制作者名
+		.header-catchphrase {
+			margin: 5px 0;
+			display: column;
+			align-items: baseline;
+
+			@include mq("tab") {
+				flex-direction: flex;
+			}
+
+			// ヘッダーロゴ
+			.header-logo {
+				margin: 0;
+				height: 100%;
+
+				a {
+					font-family: "Montserrat", sans-serif;
+					text-decoration: none;
+					font-size: 30px;
+					letter-spacing: -1px;
+					color: $color-title;
+					display: block;
+					height: 50px;
+					padding: 6px 0;
+
+					@include mq("tab") {
+						font-size: 40px;
+						height: 56px;
+						padding-bottom: 6px;
+					}
+				}
+			} /* .header-logo */
+
+			p.header-logo a {
+				// pタグになるとズレるので微調整
+				height: 56px;
+				padding: 0;
+			}
+
+			/* 制作者名 */
+			.catchphrase {
+				font-size: 0.8em;
+				font-weight: 600;
+				letter-spacing: 0;
+
+				@include mq("tab") {
+					margin-left: 20px;
+					font-size: 0.9em;
+				}
+			}
+		} /* /.header-logoauthor */
+
+		// お問い合わせボタン
+		.btn {
+			display: none;
+
+			@include mq("tab") {
+				display: block;
+			}
+		}
+	} /* /.header-inner */
+}

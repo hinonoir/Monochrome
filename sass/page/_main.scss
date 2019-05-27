@@ -1,0 +1,50 @@
+.content-wrapper {
+	margin: 20px auto;
+	width: auto;
+
+	@include mq("tab") {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	main {
+		flex: 2;
+		background-color: $color-bg-section;
+		border: $color-section-border;
+		text-align: center;
+
+		.main-inner-articles {
+			padding: 30px 20px;
+
+			@include mq("tab") {
+				padding: 40px 30px;
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+
+			.search-title {
+				width: 100%;
+				margin-top: 0;
+			}
+
+			article {
+				margin-bottom: 30px;
+
+				@include post(1.2em, $color-text);
+
+				@include mq("tab") {
+					margin-bottom: 60px;
+					width: 49%;
+					height: auto;
+
+					@include post(1.3em, $color-text);
+				}
+
+				.post-text p {
+					font-size: 0.8em;
+				} // /.post-text //
+			} // /article //
+		} // /.main-inner //
+	} // /main //
+} // /.content-wrapper //

@@ -1,0 +1,43 @@
+ul.page-numbers {
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	margin: 0 auto 20px auto;
+
+	li {
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		a,
+		span {
+			display: block;
+			width: 25px;
+			border: $color-form-border;
+			font-size: 1.2em;
+			color: $color-text;
+
+			@include mq("tab") {
+				font-size: 1.3em;
+				width: 40px;
+			}
+		}
+
+		.current {
+			background-color: #d9d9d9;
+			font-weight: 600;
+		}
+
+		.prev,
+		.next {
+			width: 70px;
+			border-radius: 0;
+
+			@include mq("tab") {
+				width: 80px;
+			}
+		}
+	} // /li //
+}

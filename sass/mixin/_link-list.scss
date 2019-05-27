@@ -1,0 +1,44 @@
+@mixin link-list {
+
+	ul li {
+		text-align: left;
+		border-bottom: 1px dashed #222;
+		position: relative;
+		overflow: hidden; //疑似要素のクリック判定のはみ出し防止.
+
+		a {
+			display: inline-block;
+			padding: 10px;
+
+			@include link-cus($color-text);
+
+			&::after {
+				font-family: "Font Awesome 5 Free";
+				content: "\f105";
+				font-weight: 600;
+				position: absolute;
+				right: 2px;
+				color: $color-text;
+				padding-left: 400px; //クリック判定を伸ばす.
+			}
+
+			&:hover {
+				text-decoration: underline;
+
+				&::after {
+					color: lighten($color-text, 40%);
+					right: 0;
+				}
+			}
+		} // /a //
+		.children li {
+			border: none;
+			margin-left: 30px;
+
+			a {
+				padding: 0;
+				color: lighten($color-text, 40%);
+			}
+		}
+	} // /ul li //
+}

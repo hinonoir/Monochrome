@@ -1,0 +1,7 @@
+// ブレイクポイントの'sp','tab','pc'のいずれかを入力 //
+@mixin mq($breakpoint: sp) {
+
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}

@@ -1,0 +1,52 @@
+.sns-share {
+	margin-top: 50px;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		li {
+			width: 45%;
+			margin-bottom: 20px;
+
+			@include mq("tab") {
+				width: 45%;
+			}
+
+			@include mq("pc") {
+				width: 23%;
+				margin-bottom: 0;
+			}
+
+			a {
+				display: block;
+				margin: 0;
+				padding: 5px;
+				color: #fff;
+				text-align: center;
+			}
+		} // /li //
+
+		.facebook {
+			background-color: #315096;
+		}
+
+		.tweet {
+			background-color: #55acee;
+		}
+
+		.pocket {
+			background-color: #f23b52;
+		}
+
+		.hatena {
+			background-color: #008fde;
+
+			.fa-hatena::before {
+				font-weight: 900;
+				content: "B!";
+			}
+		}
+	} // /ul //
+}

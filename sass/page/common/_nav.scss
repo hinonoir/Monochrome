@@ -1,0 +1,113 @@
+nav {
+	background-color: $color-bg-nav;
+	color: #fff;
+
+	.navbar {
+		display: none;
+		list-style-type: none;
+
+		@include mq("tab") {
+			display: flex;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+
+		li {
+			text-align: center;
+			flex-direction: column;
+
+			a {
+				font-family: "Kosugi Maru", sans-serif;
+				display: block;
+				position: relative;
+				padding: 10px 15px;
+				color: #fff;
+				text-decoration: none;
+				font-size: 1.1em;
+				font-weight: 600;
+				transition: 0.05s;
+
+				// ホバー時にアンダーラインが伸びる
+				&::after {
+					position: absolute;
+					content: "";
+					bottom: 0;
+					left: 0;
+					width: 0;
+					margin-bottom: 2px;
+					height: 2px;
+					background-color: #fff;
+					transition: 0.05s;
+				}
+
+				&:hover {
+
+					&::after {
+						width: 100%;
+					}
+				}
+			} /* /a */
+		} /* /li */
+
+		// サブメニュー親要素
+		.menu-item-has-children {
+			position: relative;
+
+			// 下矢印
+			a::after {
+				position: static;
+				margin-left: 5px;
+				font-family: "Font Awesome 5 Free";
+				content: "\f107";
+				width: 100%;
+				margin-bottom: 0;
+				height: auto;
+				background-color: $color-bg-nav;
+				color: #fff;
+			}
+
+			// サブメニュー（ホバー時に表示）
+			.sub-menu {
+				position: absolute;
+				opacity: 0;
+				visibility: hidden;
+				top: 70%;
+				width: 100%;
+				background: $color-bg-nav;
+				transition: 0.1s;
+				z-index: 1;
+
+				// ホバー時にアンダーラインが伸びる
+				a {
+
+					&::after {
+						position: absolute;
+						content: "";
+						bottom: 0;
+						left: 0;
+						width: 0;
+						margin-left: 0;
+						margin-bottom: 2px;
+						height: 2px;
+						background-color: #fff;
+						transition: 0.05s;
+					}
+
+					&:hover {
+
+						&::after {
+							width: 100%;
+						}
+					}
+				} /* /a */
+			} /* /.sub-menu */
+
+			// メニューホバー時にサブメニューを表示
+			&:hover .sub-menu {
+				opacity: 0.9;
+				visibility: visible;
+				top: 100%;
+			}
+		} /* /.menu-item-has-children */
+	} /* /.navbar */
+} /* /nav */

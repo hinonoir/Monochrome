@@ -1,0 +1,152 @@
+@import "../setting/color";
+@import "../setting/typography";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	word-break: break-word;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: $fz-n;
+	font-weight: $fw-base;
+	font-family: $ff-standard;
+	color: $color-text;
+	line-height: $lh-base;
+	letter-spacing: $lsp-base;
+	background: $color-bg;
+	overflow-x: hidden;
+}
+
+// コンテンツ量が少なくてもフッターが画面下に来る.
+.content {
+	flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color-title;
+	line-height: $lh-h;
+}
+
+a {
+	color: $color-link;
+	outline: none;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		color: darken($color-link, 10%);
+	}
+
+	&:visited {
+		color: $color-link;
+	}
+}
+
+br {
+	line-height: $lh-base;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+	vertical-align: top;
+	border: 1px solid #eee;
+}
+
+textarea {
+	resize: none;
+}

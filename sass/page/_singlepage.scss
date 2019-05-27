@@ -1,0 +1,87 @@
+.main-inner-content {
+	padding: 30px 20px;
+
+	@include mq("tab") {
+		padding: 40px 30px;
+	}
+
+	article {
+
+		section {
+			text-align: left;
+
+			h1 {
+				text-align: center;
+				margin: 5px 0;
+			}
+
+			.post-time,
+			.post-categories,
+			.post-categories li {
+				color: $color-text-sub;
+				font-size: 0.9em;
+				margin: 5px 0;
+			}
+
+			.header-thumbnail {
+				text-align: center;
+				border: $color-section-border;
+			}
+
+			h2 {
+				// border-left: 5px solid $color-main;
+				padding: 10px 15px;
+				background-color: $color-main;
+				color: #fff;
+			}
+
+			h3 {
+				border-left: 3px solid $color-main;
+				border-bottom: 3px solid $color-main;
+				padding: 10px 0 5px 10px;
+			}
+
+			.related {
+				margin-top: 50px;
+
+				h4 {
+					border-left: 5px solid $color-main;
+					background-color: #f7f7f7;
+					padding: 5px 10px;
+					margin: 30px 0;
+				}
+
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+
+					li {
+						width: 46%;
+						margin: 0 5px;
+
+						@include mq("tab") {
+							width: 30%;
+							margin: 0 6px;
+						}
+
+						@include mq("pc") {
+							width: 30%;
+							margin: 0 11px;
+						}
+
+						.related-thumb,
+						img {
+							margin: 0;
+							border: $color-section-border;
+						}
+
+						.related-title {
+							margin-top: 0;
+							color: $color-text-sub;
+						}
+					} // /li //
+				} // /ul //
+			} // /.related //
+		} // /section //
+	} // /article //
+}
